@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Task Manager Dashboard</h1>
+
+    <button id="logoutBtn">
+        Logout
+    </button>
+
+    <hr>
+
+    <h2>Create New Task</h2>
+
+    <input
+        type="text"
+        id="title"
+        placeholder="Enter Task Title"
+    >
+
+    <input
+        type="text"
+        id="description"
+        placeholder="Enter Task Description"
+    >
+
+    <select id="status">
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+    </select>
+
+    <button id="createTaskBtn">
+        Create Task
+    </button>
+
+    <hr>
+
+    <h2>My Tasks</h2>
+
+    <h3 id="taskStats">
+        Total Tasks: 0
+    </h3>
+
+    <div id="taskList">
+
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
