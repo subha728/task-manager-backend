@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const API_URL = "https://task-manager-backend-three-ruby.vercel.app";
 =======
 const API_URL = "https://task-manager-backend-bkbl.onrender.com";
 >>>>>>> c98ae79 (update frontend API URL)
+=======
+const API_URL = "https://task-manager-backend-bkbl.onrender.com/api";
+>>>>>>> f055d34 (Fix frontend API routes)
 
 document
   .getElementById("registerBtn")
