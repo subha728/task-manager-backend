@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const API_URL = "https://task-manager-backend-three-ruby.vercel.app";
+=======
+const API_URL = "https://task-manager-backend-bkbl.onrender.com";
+>>>>>>> c98ae79 (update frontend API URL)
 
 document
   .getElementById("loginBtn")
@@ -22,7 +26,7 @@ document
     try {
 
       const response = await fetch(
-        `${API_URL}/auth/login`,
+        `${API_URL}/login`,
         {
           method: "POST",
           headers: {
@@ -39,15 +43,11 @@ document
 
       if (response.ok) {
 
-        localStorage.setItem(
-          "token",
-          data.token
-        );
+        localStorage.setItem("token", data.token);
 
         alert("Login Successful");
 
-        window.location.href =
-          "dashboard.html";
+        window.location.href = "dashboard.html";
 
       } else {
 
@@ -60,7 +60,7 @@ document
 
     } catch (error) {
 
-      console.error(error);
+      console.error("Login Error:", error);
       alert("Server Error");
 
     }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const API_URL = "https://task-manager-backend-three-ruby.vercel.app";
+=======
+const API_URL = "https://task-manager-backend-bkbl.onrender.com";
+>>>>>>> c98ae79 (update frontend API URL)
 
 const token = localStorage.getItem("token");
 
@@ -32,7 +36,7 @@ document
 
     try {
 
-      const response = await fetch(`${API_URL}/tasks`, {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -77,18 +81,18 @@ async function loadTasks() {
 
   try {
 
-    const response = await fetch(`${API_URL}/tasks`, {
+    const response = await fetch(API_URL, {
       headers: {
         Authorization: `Bearer ${token}`
       }
     });
 
-   const tasks = await response.json();
+    const tasks = await response.json();
 
-document.getElementById("taskStats").innerText =
-  `Total Tasks: ${tasks.length}`;
+    document.getElementById("taskStats").innerText =
+      `Total Tasks: ${tasks.length}`;
 
-const taskList = document.getElementById("taskList");
+    const taskList = document.getElementById("taskList");
 
     taskList.innerHTML = "";
 
@@ -100,23 +104,23 @@ const taskList = document.getElementById("taskList");
 
     tasks.forEach((task) => {
 
-  taskList.innerHTML += `
-    <div class="task-card">
-      <h3>${task.title}</h3>
-      <p>${task.description}</p>
-      <p><strong>Status:</strong> ${task.status}</p>
+      taskList.innerHTML += `
+        <div class="task-card">
+          <h3>${task.title}</h3>
+          <p>${task.description}</p>
+          <p><strong>Status:</strong> ${task.status}</p>
 
-      <button onclick="editTask('${task._id}')">
-        Edit
-      </button>
+          <button onclick="editTask('${task._id}')">
+            Edit
+          </button>
 
-      <button onclick="deleteTask('${task._id}')">
-        Delete
-      </button>
-    </div>
-  `;
+          <button onclick="deleteTask('${task._id}')">
+            Delete
+          </button>
+        </div>
+      `;
 
-});
+    });
 
   } catch (error) {
 
@@ -132,7 +136,7 @@ async function deleteTask(id) {
   try {
 
     const response = await fetch(
-      `${API_URL}/tasks/${id}`,
+      `${API_URL}/${id}`,
       {
         method: "DELETE",
         headers: {
@@ -157,6 +161,7 @@ async function deleteTask(id) {
 
 }
 
+// Edit Task
 async function editTask(id) {
 
   const title = prompt("Enter new title");
@@ -173,7 +178,7 @@ async function editTask(id) {
   try {
 
     const response = await fetch(
-      `${API_URL}/tasks/${id}`,
+      `${API_URL}/${id}`,
       {
         method: "PUT",
         headers: {
