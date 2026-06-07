@@ -43,7 +43,8 @@ document
         }
       );
 
-      const data = await response.json();
+      const text = await response.text();
+console.log("Response received:", text);
 
       if (response.ok) {
 
