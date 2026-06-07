@@ -25,7 +25,7 @@ Authentication: JWT, bcryptjs
 
 Live Demo
 
-Frontend: subha728-task-manager-backend.vercel.app
+Frontend: https://subha728-task-manager-backend.vercel.app/
 
 Backend: https://task-manager-backend-bkbl.onrender.com
 
